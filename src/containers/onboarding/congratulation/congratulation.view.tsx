@@ -1,15 +1,23 @@
 import type { FC, FormEventHandler } from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { Stepper } from "components/molecules/Stepper";
 import { ReactComponent as TickSVG } from "assets/images/tick.svg";
 
 interface CongratulationViewProps {
   userName: string;
+  isLaunching: boolean;
   onSubmit: FormEventHandler;
 }
 
 export const CongratulationView: FC<CongratulationViewProps> = ({
   userName,
+  isLaunching,
   onSubmit,
 }) => {
   return (
@@ -38,8 +46,9 @@ export const CongratulationView: FC<CongratulationViewProps> = ({
           variant={"contained"}
           type={"submit"}
           sx={{ width: { xs: "80%", sm: "420px" }, alignSelf: "center" }}
+          disabled={isLaunching}
         >
-          Launch Eden
+          {isLaunching ? <CircularProgress size={24} /> : "Launch Eden"}
         </Button>
       </Stack>
     </Stack>
