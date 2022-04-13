@@ -12,10 +12,11 @@ export const OnboardingView: FC<OnboardingViewProps> = ({ activeStep }) => {
   return (
     <Stack
       flex={1}
-      my={8}
+      pb={8}
+      px={1}
       bgcolor={"#fff"}
       alignItems={"center"}
-      sx={{ mx: { xs: 0, sm: "4vw" } }}
+      sx={{ mx: { xs: 0, sm: "4vw" }, my: { xs: 0, sm: 8 } }}
     >
       <Stack direction={"row"} alignItems={"center"} spacing={1} mt={10} mb={8}>
         <LogoSVG height={"32px"} width={"32px"} />
