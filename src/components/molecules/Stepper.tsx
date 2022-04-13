@@ -37,9 +37,9 @@ const Step: FC<StepProps> = ({ index, steps, activeStep }) => {
       <Box
         bgcolor={isStepPassed ? "primary.main" : undefined}
         borderRadius={"100%"}
-        width={"32px"}
-        height={"32px"}
-        lineHeight={"34px"}
+        width={"36px"}
+        height={"36px"}
+        lineHeight={"40px"}
         textAlign={"center"}
         color={isStepPassed ? "#fff" : "#646F85"}
         border={`solid 1px ${
@@ -47,7 +47,8 @@ const Step: FC<StepProps> = ({ index, steps, activeStep }) => {
             ? theme.palette.primary.main
             : theme.palette.secondary.main
         }`}
-        fontSize={"0.75rem"}
+        fontSize={"0.875rem"}
+        fontWeight={500}
       >
         {index + 1}
       </Box>

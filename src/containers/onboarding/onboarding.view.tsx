@@ -17,9 +17,9 @@ export const OnboardingView: FC<OnboardingViewProps> = ({ activeStep }) => {
       alignItems={"center"}
       sx={{ mx: { xs: 0, sm: "4vw" } }}
     >
-      <Stack direction={"row"} alignItems={"center"} spacing={1} mt={12} mb={8}>
+      <Stack direction={"row"} alignItems={"center"} spacing={1} mt={10} mb={8}>
         <LogoSVG height={"32px"} width={"32px"} />
-        <Typography fontWeight={700} fontSize={"1.5rem"}>
+        <Typography fontWeight={700} fontSize={"1.75rem"}>
           Eden
         </Typography>
       </Stack>
