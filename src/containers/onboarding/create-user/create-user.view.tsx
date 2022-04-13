@@ -35,7 +35,15 @@ export const CreateUserView: FC<CreateUserViewProps> = ({
       <Typography variant={"subtitle1"} textAlign={"center"} mt={2}>
         You can always change them later.
       </Typography>
-      <Stack component={"form"} mt={6} spacing={2.5} onSubmit={onSubmit}>
+      <Stack
+        component={"form"}
+        mt={6}
+        spacing={2.5}
+        width={"100%"}
+        maxWidth={"400px"}
+        alignSelf={"center"}
+        onSubmit={onSubmit}
+      >
         <Stack>
           <InputLabel htmlFor="fullName" className="OutlinedInputLabel">
             Full Name

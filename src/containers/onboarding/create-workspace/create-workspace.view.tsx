@@ -39,7 +39,8 @@ export const CreateWorkspaceView: FC<CreateWorkspaceViewProps> = ({
         component={"form"}
         mt={6}
         spacing={2.5}
-        maxWidth={"420px"}
+        width={"100%"}
+        maxWidth={"400px"}
         alignSelf={"center"}
         onSubmit={onSubmit}
       >

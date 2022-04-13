@@ -30,9 +30,10 @@ export const SetPlanView: FC<SetPlanViewProps> = ({
       <Stack
         component={"form"}
         mt={6}
-        maxWidth={"420px"}
-        alignSelf={"center"}
         spacing={2.5}
+        width={"100%"}
+        maxWidth={"400px"}
+        alignSelf={"center"}
         onSubmit={onSubmit}
       >
         <Stack

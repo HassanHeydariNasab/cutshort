@@ -31,7 +31,7 @@ export const CongratulationView: FC<CongratulationViewProps> = ({
         height={"64px"}
         justifyContent={"center"}
         alignItems={"center"}
-        mb={6}
+        mb={5}
       >
         <TickSVG height={"24px"} width={"24px"} />
       </Stack>
@@ -45,7 +45,7 @@ export const CongratulationView: FC<CongratulationViewProps> = ({
         <Button
           variant={"contained"}
           type={"submit"}
-          sx={{ width: { xs: "80%", sm: "420px" }, alignSelf: "center" }}
+          sx={{ width: { xs: "80%", sm: "400px" }, alignSelf: "center" }}
           disabled={isLaunching}
         >
           {isLaunching ? <CircularProgress size={24} /> : "Launch Eden"}
