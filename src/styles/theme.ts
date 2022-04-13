@@ -17,6 +17,9 @@ export const theme = createTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
+        root: {
+          color: "#364259",
+        },
         h1: {
           color: "#151B28",
           fontSize: "2rem",
@@ -25,6 +28,10 @@ export const theme = createTheme({
         subtitle1: {
           color: "#5C6986",
           fontSize: "1rem",
+        },
+        subtitle2: {
+          color: "#364259cc",
+          fontSize: "0.875rem",
         },
       },
     },

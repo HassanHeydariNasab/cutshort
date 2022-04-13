@@ -45,6 +45,20 @@ export const onboardingApi = createApi({
         });
       },
     }),
+    updatePlan: builder.mutation<{ plan: string }, { body: { plan: string } }>({
+      //query: ({body}) => ({ url: "/v1/current-user", body, method: "PATCH" }),
+      queryFn: ({ body }) => {
+        return new Promise((resolve) => {
+          window.setTimeout(() => {
+            resolve({
+              data: {
+                plan: body.plan,
+              },
+            });
+          }, 3000);
+        });
+      },
+    }),
   }),
 });
 
@@ -52,4 +66,5 @@ export const {
   util: onboardingApiUtil,
   useCreateUserMutation,
   useCreateWorkspaceMutation,
+  useUpdatePlanMutation,
 } = onboardingApi;
