@@ -76,7 +76,7 @@ export const CreateWorkspaceView: FC<CreateWorkspaceViewProps> = ({
                 backgroundColor: "#5C69aa0a",
                 "&.Mui-disabled input": {
                   color: "#5C69aaaa",
-                  "-webkitTextFillColor": "unset",
+                  WebkitTextFillColor: "unset",
                 },
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderRightWidth: 0,
