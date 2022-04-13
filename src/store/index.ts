@@ -5,9 +5,11 @@ import { rtkQueryErrorLogger } from "./middlewares";
 import { appReducer } from "./app/app.slice";
 import { onboardingApi } from "./onboarding/onboarding.api";
 import { onboardingReducer } from "./onboarding/onboarding.slice";
+import { userReducer } from "./user/user.slice";
 
 const rootReducer = combineReducers({
   app: appReducer,
+  user: userReducer,
   onboarding: onboardingReducer,
   [onboardingApi.reducerPath]: onboardingApi.reducer,
 });

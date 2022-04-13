@@ -4,6 +4,7 @@ import { OnboardingScreen } from "./onboarding";
 import { CreateUserScreen } from "./onboarding/create-user";
 import { CreateWorkspaceScreen } from "./onboarding/create-workspace";
 import { SetPlanScreen } from "./onboarding/set-plan";
+import { CongratulationScreen } from "./onboarding/congratulation";
 
 export const RootRouter = () => {
   return (
@@ -13,6 +14,7 @@ export const RootRouter = () => {
         <Route path={"create-user"} element={<CreateUserScreen />} />
         <Route path={"create-workspace"} element={<CreateWorkspaceScreen />} />
         <Route path={"set-plan"} element={<SetPlanScreen />} />
+        <Route path={"congratulation"} element={<CongratulationScreen />} />
       </Route>
     </Routes>
   );

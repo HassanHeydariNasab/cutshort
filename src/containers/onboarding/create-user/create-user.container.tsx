@@ -1,12 +1,15 @@
 import { ChangeEventHandler, FC, FormEventHandler, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useCreateUserMutation } from "store/onboarding/onboarding.api";
+import { userActions } from "store/user/user.slice";
 import { CreateUserView } from "./create-user.view";
 
 interface CreateUserContainerProps {}
 
 export const CreateUserContainer: FC<CreateUserContainerProps> = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [fullName, setFullName] = useState<string>("");
   const [displayName, setDisplayName] = useState<string>("");
@@ -23,9 +26,12 @@ export const CreateUserContainer: FC<CreateUserContainerProps> = () => {
 
   const onSubmit: FormEventHandler = (event) => {
     event.preventDefault();
-    createUser({ body: { fullName, displayName } }).then(() => {
-      navigate("/onboarding/create-workspace");
-    });
+    createUser({ body: { fullName, displayName } })
+      .unwrap()
+      .then((user) => {
+        dispatch(userActions.setCurrentUser(user));
+        navigate("/onboarding/create-workspace");
+      });
   };
 
   return (

@@ -17,7 +17,7 @@ export const OnboardingView: FC<OnboardingViewProps> = () => {
     >
       <Stack direction={"row"} alignItems={"center"} spacing={1} mt={10} mb={8}>
         <LogoSVG height={"32px"} width={"32px"} />
-        <Typography fontWeight={700} fontSize={"1.75rem"}>
+        <Typography fontWeight={700} fontSize={"1.75rem"} color={"#080B11"}>
           Eden
         </Typography>
       </Stack>

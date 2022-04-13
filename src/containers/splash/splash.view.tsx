@@ -3,8 +3,6 @@ import { Stack } from "@mui/material";
 
 interface SplashViewProps {}
 
-export const SplashView: FC<
-  SplashViewProps
-> = () => {
-  return <Stack>splash</Stack>;
+export const SplashView: FC<SplashViewProps> = () => {
+  return null;
 };
