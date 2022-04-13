@@ -2,13 +2,10 @@ import type { FC } from "react";
 import { Stack, Typography } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as LogoSVG } from "assets/images/logo.svg";
-import { Stepper } from "components/molecules/Stepper";
 
-interface OnboardingViewProps {
-  activeStep: number;
-}
+interface OnboardingViewProps {}
 
-export const OnboardingView: FC<OnboardingViewProps> = ({ activeStep }) => {
+export const OnboardingView: FC<OnboardingViewProps> = () => {
   return (
     <Stack
       flex={1}
@@ -24,7 +21,6 @@ export const OnboardingView: FC<OnboardingViewProps> = ({ activeStep }) => {
           Eden
         </Typography>
       </Stack>
-      <Stepper steps={4} activeStep={activeStep} />
       <Outlet />
     </Stack>
   );

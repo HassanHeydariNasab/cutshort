@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "..";
 import type { User } from "store/user/user.model";
+import { Workspace } from "store/workspace/workspace.model";
 
 export const onboardingApi = createApi({
   reducerPath: "onboardingApi",
@@ -25,7 +26,30 @@ export const onboardingApi = createApi({
         });
       },
     }),
+    createWorkspace: builder.mutation<
+      Workspace,
+      { body: { name: string; url: string | null } }
+    >({
+      //query: ({body}) => ({ url: "/v1/workspaces", body, method: "POST" }),
+      queryFn: ({ body }) => {
+        return new Promise((resolve) => {
+          window.setTimeout(() => {
+            resolve({
+              data: {
+                id: "123",
+                name: body.name,
+                url: body.url,
+              },
+            });
+          }, 3000);
+        });
+      },
+    }),
   }),
 });
 
-export const { util: onboardingApiUtil, useCreateUserMutation } = onboardingApi;
+export const {
+  util: onboardingApiUtil,
+  useCreateUserMutation,
+  useCreateWorkspaceMutation,
+} = onboardingApi;

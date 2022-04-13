@@ -1,15 +1,16 @@
 import type { FC } from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, SxProps } from "@mui/material";
 import { theme } from "styles/theme";
 
 interface StepperProps {
   steps: number;
   activeStep: number;
+  sx?: SxProps;
 }
 
-export const Stepper: FC<StepperProps> = ({ steps, activeStep }) => {
+export const Stepper: FC<StepperProps> = ({ steps, activeStep, sx }) => {
   return (
-    <Stack direction={"row"}>
+    <Stack direction={"row"} sx={sx}>
       {new Array(steps).fill(null).map((_, index) => (
         <Step index={index} steps={steps} activeStep={activeStep} key={index} />
       ))}

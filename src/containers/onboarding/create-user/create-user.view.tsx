@@ -7,6 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { Stepper } from "components/molecules/Stepper";
 
 interface CreateUserViewProps {
   fullName: string;
@@ -26,7 +27,8 @@ export const CreateUserView: FC<CreateUserViewProps> = ({
   onSubmit,
 }) => {
   return (
-    <Stack mt={11}>
+    <Stack>
+      <Stepper steps={4} activeStep={0} sx={{ alignSelf: "center", mb: 11 }} />
       <Typography variant={"h1"} textAlign={"center"}>
         Welcome! First things first...
       </Typography>
