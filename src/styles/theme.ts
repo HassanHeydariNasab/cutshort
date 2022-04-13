@@ -13,7 +13,7 @@ export const theme = createTheme({
   typography: {
     fontFamily: "Inter",
   },
-  shape: { borderRadius: "6px" },
+  shape: { borderRadius: 6 },
   components: {
     MuiTypography: {
       styleOverrides: {
