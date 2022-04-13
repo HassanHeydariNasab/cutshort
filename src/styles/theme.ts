@@ -23,7 +23,7 @@ export const theme = createTheme({
         h1: {
           color: "#151B28",
           fontSize: "2rem",
-          fontWeight: 800,
+          fontWeight: 600,
         },
         subtitle1: {
           color: "#5C6986",
