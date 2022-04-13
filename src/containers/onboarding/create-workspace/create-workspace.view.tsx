@@ -19,8 +19,8 @@ interface CreateWorkspaceViewProps {
 }
 
 export const CreateWorkspaceView: FC<CreateWorkspaceViewProps> = ({
-  name: name,
-  url: url,
+  name,
+  url,
   isSubmitting,
   onChangeName,
   onChangeUrl,
