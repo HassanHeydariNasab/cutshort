@@ -76,19 +76,23 @@ export const CreateWorkspaceView: FC<CreateWorkspaceViewProps> = ({
                 borderBottomRightRadius: 0,
                 backgroundColor: "#5C69aa0a",
                 "&.Mui-disabled input": {
-                  color: "#5C69aaaa",
+                  color: "#5C6988aa",
                   WebkitTextFillColor: "unset",
                 },
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderRightWidth: 0,
                 },
                 flex: 1,
+                fontWeight: 500,
+                "& input": {
+                  padding: "14px 10px",
+                },
               }}
               disabled
             />
             <OutlinedInput
               id="workspace-url"
-              placeholder="Steve"
+              placeholder="Example"
               value={url}
               onChange={onChangeUrl}
               sx={{
