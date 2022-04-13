@@ -35,7 +35,11 @@ export const SetPlanView: FC<SetPlanViewProps> = ({
         spacing={2.5}
         onSubmit={onSubmit}
       >
-        <Stack direction="row" spacing={4}>
+        <Stack
+          direction="row"
+          spacing={4}
+          sx={{ "& > *": { cursor: "pointer" } }}
+        >
           <PlanItem
             title="For myself"
             description="Write better. Think more clearly. Stay organized."
